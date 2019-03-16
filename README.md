@@ -1,2 +1,0 @@
-# csderma
-Website for csderma
