@@ -8,7 +8,25 @@
 
     <body>
 
+        <header class="c-header--mobile">
+
+            <button class="i-btnMenu js-btnMenu">
+                icon
+            </button>
+
+            <div class="c-header__titleMenu">
+                CSDerma
+            </div>
+
+            <div class="c-header__cart">
+                <img class="i-cart" src="./images/cart.png">
+            </div>
+
+            
+        </header><!-- /header -->
+
         <header class="c-header">
+
 
             <div class="c-header__container">
                 
@@ -41,9 +59,70 @@
             
         </header><!-- /header -->
 
-        <nav class="c-nav">
+        <nav class="c-nav js-menuMobile">
             <ul class="c-nav__items">
-                <li class="c-nav__item"><a class="c-nav__link" href="#">Categoria</a></li>
+                <li class="c-nav__item  c-nav__categories">
+                    <a class="c-nav__link" href="#">Categoria</a>
+
+                    <div class="c-nav__categories__container">
+
+                        <ul class="c-nav__category">
+                            <li class="c-nav__category__title">Limpieza Facial</li>
+                            <li class="c-nav__category__item"><a class="c-nav__category__link" href="#">Serum</a></li>
+                            <li class="c-nav__category__item"><a class="c-nav__category__link" href="#">Cleansers</a></li>
+                            <li class="c-nav__category__item"><a class="c-nav__category__link" href="#">Eye care</a></li>
+                            <li class="c-nav__category__item"><a class="c-nav__category__link" href="#">Scrubs</a></li>
+                        </ul>
+
+                        <ul class="c-nav__category">
+                            <li class="c-nav__category__title">Hidratantes</li>
+                            <li class="c-nav__category__item"><a class="c-nav__category__link" href="#">crema</a></li>
+                            <li class="c-nav__category__item"><a class="c-nav__category__link" href="#">Contorno</a></li>
+                            <li class="c-nav__category__item"><a class="c-nav__category__link" href="#">Labios</a></li>
+                            <li class="c-nav__category__item"><a class="c-nav__category__link" href="#">Tratamientos</a></li>
+                        </ul>
+
+                        <ul class="c-nav__category">
+                            <li class="c-nav__category__title">Antioxidantes</li>
+                            <li class="c-nav__category__item"><a class="c-nav__category__link" href="#">Dry Skin</a></li>
+                            <li class="c-nav__category__item"><a class="c-nav__category__link" href="#">Cleansing</a></li>
+                            <li class="c-nav__category__item"><a class="c-nav__category__link" href="#">Suncare</a></li>
+                            <li class="c-nav__category__item"><a class="c-nav__category__link" href="#">Redness</a></li>
+                        </ul>
+
+                        <ul class="c-nav__category">
+                            <li class="c-nav__category__title">Mascarillas</li>
+                            <li class="c-nav__category__item"><a class="c-nav__category__link" href="#">Avene</a></li>
+                            <li class="c-nav__category__item"><a class="c-nav__category__link" href="#">Bioderma</a></li>
+                            <li class="c-nav__category__item"><a class="c-nav__category__link" href="#">Skinceuticals</a></li>
+                            <li class="c-nav__category__item"><a class="c-nav__category__link" href="#">Filorga</a></li>
+                        </ul>
+
+                        <ul class="c-nav__category">
+                            <li class="c-nav__category__title">Correctores</li>
+                            <li class="c-nav__category__item"><a class="c-nav__category__link" href="#">Avene</a></li>
+                            <li class="c-nav__category__item"><a class="c-nav__category__link" href="#">Bioderma</a></li>
+                            <li class="c-nav__category__item"><a class="c-nav__category__link" href="#">Skinceuticals</a></li>
+                            <li class="c-nav__category__item"><a class="c-nav__category__link" href="#">Filorga</a></li>
+                        </ul>
+
+                        <ul class="c-nav__category">
+                            <li class="c-nav__category__title">Contorno de ojos</li>
+                            <li class="c-nav__category__item"><a class="c-nav__category__link" href="#">Avene</a></li>
+                            <li class="c-nav__category__item"><a class="c-nav__category__link" href="#">Bioderma</a></li>
+                            <li class="c-nav__category__item"><a class="c-nav__category__link" href="#">Skinceuticals</a></li>
+                            <li class="c-nav__category__item"><a class="c-nav__category__link" href="#">Filorga</a></li>
+                        </ul>
+                        
+                    </div>
+                </li>
+
+
+
+
+
+
+
                 <li class="c-nav__item"><a class="c-nav__link" href="#">Tipo de piel</a></li>
                 <li class="c-nav__item"><a class="c-nav__link" href="#">Marcas</a></li>
                 <li class="c-nav__item"><a class="c-nav__link" href="#">Uso</a></li>
@@ -296,9 +375,11 @@
 
                 <section class="c-footer__contact  c-footer__section">
                     <h3>Contáctanos</h3>
-                    <p>Facebook</p>
-                    <p>Twitter</p>
-                    <p>Instagram</p>
+                    <ul>
+                        <li><a href="#" title="">Facebook</a></li>
+                        <li><a href="#" title="">Twitter</a></li>
+                        <li><a href="#" title="">Instagram</a></li>
+                    </ul>
                 </section>
 
                 <section class="c-footer__newsletter c-footer__section">
@@ -320,6 +401,21 @@
             </div>
 
         </footer>
+
+        <script type="text/javascript">
+            
+            const btnMenu = document.querySelector('.js-btnMenu');
+            const menuMobile = document.querySelector('.js-menuMobile');
+
+            btnMenu.addEventListener('click', event => {
+                console.log('click');
+
+                btnMenu.classList.toggle('is-active');
+
+                menuMobile.classList.toggle('is-active');
+            });
+
+        </script>
 
     </body>
 </html>
